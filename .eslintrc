@@ -60,9 +60,16 @@
     }
   },
   "rules": {
+    "object-curly-spacing": ["error", "never", { "arraysInObjects": true }],//取消花括号内变量必须有空格隔开
+    "object-curly-newline": 0,//强制花括号内换行符的一致性
+    "no-unused-vars": 1,      //没被使用的变量
+    "no-useless-concat": 0,  //禁止不必要的字符串字面量或模板字面量的连接,
+    "indent":  ["error", 4],              //强制使用一致的缩进
+    "no-use-before-define": [0, { "functions": false }],//禁止在变量定义之前使用它们
+
     "react/jsx-uses-vars": 2,
     "react/jsx-uses-react": 2,
-    "comma-dangle": [
+    "comma-dangle": [   //在定义对象或数组时，最后一项不能加逗号
       "error",
       {
         "arrays": "never",
